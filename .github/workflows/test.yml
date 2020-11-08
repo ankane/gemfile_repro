@@ -7,20 +7,15 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - ruby: 2.7
-          gemfile: Gemfile
-        - ruby: 2.6
-          gemfile: gemfiles/activerecord52.gemfile
-        - ruby: 2.6
-          gemfile: test/gemfiles/activerecord52.gemfile
-        - ruby: 2.6
-          gemfile: test/gemfiles/activerecord52_inline.gemfile
+        - gemfile: Gemfile
+        - gemfile: gemfiles/Gemfile
+        - gemfile: test/gemfiles/Gemfile
     env:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
     steps:
     - uses: actions/checkout@v2
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: ${{ matrix.ruby }}
+        ruby-version: 2.7
         bundler-cache: true
     - run: bundle exec rake test
