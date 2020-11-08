@@ -10,6 +10,7 @@ jobs:
         - gemfile: Gemfile
         - gemfile: gemfiles/Gemfile
         - gemfile: gemfiles/nested/Gemfile
+        - gemfile: test/Gemfile
         - gemfile: test/gemfiles/Gemfile
         - gemfile: test/other/Gemfile
     env:
