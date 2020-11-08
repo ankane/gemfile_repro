@@ -11,6 +11,7 @@ jobs:
         - gemfile: gemfiles/Gemfile
         - gemfile: gemfiles/nested/Gemfile
         - gemfile: test/gemfiles/Gemfile
+        - gemfile: test/other/Gemfile
     env:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
     steps:
