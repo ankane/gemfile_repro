@@ -13,6 +13,8 @@ jobs:
           gemfile: gemfiles/activerecord52.gemfile
         - ruby: 2.6
           gemfile: test/gemfiles/activerecord52.gemfile
+        - ruby: 2.6
+          gemfile: test/gemfiles/activerecord52_inline.gemfile
     env:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
     steps:
