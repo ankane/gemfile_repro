@@ -9,7 +9,7 @@ jobs:
         include:
         - gemfile: Gemfile
         - gemfile: gemfiles/Gemfile
-        - gemfile: test/gemfiles/Gemfile
+        - gemfile: gemfiles/nested/Gemfile
     env:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
     steps:
