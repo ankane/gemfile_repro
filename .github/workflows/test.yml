@@ -10,6 +10,8 @@ jobs:
         - ruby: 2.7
           gemfile: Gemfile
         - ruby: 2.6
+          gemfile: gemfiles/activerecord52.gemfile
+        - ruby: 2.6
           gemfile: test/gemfiles/activerecord52.gemfile
     env:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
